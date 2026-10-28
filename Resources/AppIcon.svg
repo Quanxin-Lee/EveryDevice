@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>EveryDevice</title>
+  <desc>Menu bar system monitor icon. Closed outer ring r344 / stroke 58, orange reading arc r208 / stroke 56 with a 80 degree gap facing upper right, hub r64.</desc>
+
+  <defs>
+    <linearGradient id="baseFill" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#4F5E79"/>
+      <stop offset="0.18" stop-color="#2A3446"/>
+      <stop offset="0.58" stop-color="#121922"/>
+      <stop offset="1" stop-color="#060A10"/>
+    </linearGradient>
+
+    <radialGradient id="baseVignette" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+
+    <radialGradient id="centerGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4A94FF" stop-opacity="0.15"/>
+      <stop offset="0.6" stop-color="#4A94FF" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#4A94FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="baseRim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.26"/>
+      <stop offset="0.4" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="ringBlue" x1="0" y1="0.2" x2="1" y2="0.8">
+      <stop offset="0" stop-color="#3473E4"/>
+      <stop offset="0.5" stop-color="#4A90F7"/>
+      <stop offset="1" stop-color="#66ACFD"/>
+    </linearGradient>
+
+    <linearGradient id="arcOrange" x1="0" y1="0.2" x2="1" y2="0.8">
+      <stop offset="0" stop-color="#E79205"/>
+      <stop offset="0.5" stop-color="#F9AC1C"/>
+      <stop offset="1" stop-color="#FFC14A"/>
+    </linearGradient>
+
+    <linearGradient id="bevelBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.26"/>
+      <stop offset="0.32" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="0.6" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.17"/>
+    </linearGradient>
+
+    <linearGradient id="bevelOrange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="0.3" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="0.6" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <radialGradient id="hubBlue" cx="0.36" cy="0.26" r="0.95">
+      <stop offset="0" stop-color="#8ACBFF"/>
+      <stop offset="0.42" stop-color="#4690FD"/>
+      <stop offset="1" stop-color="#2064E8"/>
+    </radialGradient>
+
+    <clipPath id="baseClip">
+      <rect x="28" y="26" width="968" height="968" rx="221"/>
+    </clipPath>
+  </defs>
+
+  <!-- Rounded tile: fill, vignette and rim highlight. Change rx to reshape the corners. -->
+  <g id="base">
+    <rect id="base-shape" x="28" y="26" width="968" height="968" rx="221" fill="url(#baseFill)"/>
+    <rect id="base-vignette" clip-path="url(#baseClip)" x="28" y="26" width="968" height="968"
+          fill="url(#baseVignette)"/>
+    <rect id="base-rim" x="29.5" y="27.5" width="965" height="965" rx="219.5"
+          fill="none" stroke="url(#baseRim)" stroke-width="3"/>
+  </g>
+
+  <!-- Soft blue glow behind the mark. -->
+  <g id="glow">
+    <circle cx="512" cy="502" r="350" fill="url(#centerGlow)" clip-path="url(#baseClip)"/>
+  </g>
+
+  <!-- Rings. Center (512,502). Angles start at 3 o'clock and run counter-clockwise.
+       To rotate the orange gap, recompute its two endpoints as
+       (512 + 208*cos(theta), 502 - 208*sin(theta)).
+       The matching *-bevel path adds the top-lit / bottom-shaded shading. -->
+  <g id="rings" fill="none" stroke-linecap="round">
+    <circle id="ring-outer" cx="512" cy="502" r="344" stroke="url(#ringBlue)" stroke-width="58"/>
+    <circle id="ring-outer-bevel" cx="512" cy="502" r="344" stroke="url(#bevelBlue)" stroke-width="58"/>
+
+    <path id="arc-inner" d="M 530.13 294.79 A 208 208 0 1 0 719.21 483.87" stroke="url(#arcOrange)" stroke-width="56"/>
+    <path id="arc-inner-bevel" d="M 530.13 294.79 A 208 208 0 1 0 719.21 483.87" stroke="url(#bevelOrange)" stroke-width="56"/>
+  </g>
+
+  <!-- Center dot. -->
+  <g id="hub">
+    <circle id="hub-dot" cx="512" cy="502" r="64" fill="url(#hubBlue)"/>
+  </g>
+</svg>

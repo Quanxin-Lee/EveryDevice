@@ -1,0 +1,181 @@
+/* Metric names */
+"metric.cpu.title" = "处理器";
+"metric.gpu.title" = "图形处理器";
+"metric.memory.title" = "内存";
+"metric.network.title" = "网络";
+"metric.disk.title" = "磁盘";
+"metric.battery.title" = "电池";
+"metric.temperature.title" = "温度";
+
+/* Thermal pressure */
+"thermal.nominal" = "正常";
+"thermal.fair" = "偏热";
+"thermal.serious" = "过热";
+"thermal.critical" = "严重";
+
+/* Menu */
+"menu.about" = "关于 EveryDevice";
+"menu.settings" = "设置…";
+"menu.hide" = "隐藏 EveryDevice";
+"menu.hideOthers" = "隐藏其他";
+"menu.showAll" = "显示全部";
+"menu.quit" = "退出 EveryDevice";
+"menu.file" = "文件";
+"menu.closeWindow" = "关闭窗口";
+"menu.edit" = "编辑";
+"menu.undo" = "撤销";
+"menu.redo" = "重做";
+"menu.cut" = "剪切";
+"menu.copy" = "拷贝";
+"menu.paste" = "粘贴";
+"menu.selectAll" = "全选";
+"menu.window" = "窗口";
+"menu.minimize" = "最小化";
+"menu.zoom" = "缩放";
+"menu.bringAllToFront" = "前置全部窗口";
+"status.menu.openPanel" = "打开面板";
+"status.accessibility" = "EveryDevice 系统状态";
+"status.tooltip.cpu" = "CPU %1$@ · GPU %2$@";
+"status.tooltip.memory" = "内存 %1$@ · 温度 %2$@";
+"status.tooltip.network" = "↓ %1$@ · ↑ %2$@";
+
+/* Panel */
+"panel.cpu.detail" = "%1$d 核 · 负载 %2$@";
+"panel.gpu.stale" = "数据陈旧";
+"panel.gpu.unavailable" = "数据不可用";
+"panel.gpu.memory" = "显存 %@";
+"panel.memory.swap" = "交换 %@";
+"panel.disk.free" = "可用 %1$@ / %2$@";
+"panel.disk.writeRate" = "写 %@";
+"panel.battery.absent" = "未检测到电池";
+"panel.battery.charged" = "已充满";
+"panel.battery.charging" = "正在充电";
+"panel.battery.pluggedIn" = "已接通电源";
+"panel.battery.onBattery" = "电池供电";
+"panel.battery.timeToFull" = "预计 %@ 充满";
+"panel.battery.timeRemaining" = "预计剩余 %@";
+"panel.temperature.gpuDetail" = "GPU %1$@ · %2$@";
+"panel.temperature.unavailable" = "温度传感器不可用";
+"panel.process.title" = "进程";
+"panel.process.sort" = "排序";
+"panel.process.cpu" = "CPU";
+"panel.process.memory" = "内存";
+"panel.process.collecting" = "正在采集…";
+"panel.process.unreadable" = "另有 %d 个系统进程不可读";
+
+/* Settings */
+"settings.window.title" = "EveryDevice 设置";
+"settings.page.general" = "通用";
+"settings.page.panel" = "面板";
+"settings.page.alerts" = "告警";
+"settings.page.data" = "数据";
+"settings.page.about" = "关于";
+"settings.section.menuBar" = "菜单栏";
+"settings.ringMetric" = "圆环指标";
+"settings.showValue" = "显示数值";
+"settings.section.refresh" = "刷新";
+"settings.refreshInterval" = "刷新间隔";
+"settings.interval.1s" = "1 秒";
+"settings.interval.2s" = "2 秒";
+"settings.interval.5s" = "5 秒";
+"settings.section.launch" = "启动";
+"settings.launchAtLogin" = "开机自动启动";
+"settings.launch.approval" = "请在系统设置 › 通用 › 登录项中允许 EveryDevice";
+"settings.launch.fallback" = "系统未确认登录项，已写入 LaunchAgent 兜底";
+"settings.section.power" = "电源";
+"settings.keepAwake" = "保持唤醒（防止空闲睡眠）";
+"settings.power.rejected" = "已请求，但系统未接受。";
+"settings.section.language" = "语言";
+"settings.language" = "语言";
+"settings.language.followSystem" = "跟随系统";
+"settings.section.appearance" = "外观";
+"settings.appearance" = "外观";
+"appearance.system" = "跟随系统";
+"appearance.light" = "浅色";
+"appearance.dark" = "深色";
+"settings.section.theme" = "主题";
+"settings.section.layout" = "布局";
+"settings.panelWidth" = "宽度";
+"settings.panelDensity" = "密度";
+"settings.showTemperature" = "温度条";
+"settings.showProcesses" = "进程排行";
+"settings.section.cards" = "指标卡片";
+"settings.moveUp" = "上移";
+"settings.moveDown" = "下移";
+"settings.section.notifications" = "通知权限";
+"settings.notifications.allowed" = "通知权限已允许";
+"settings.notifications.denied" = "通知权限已被拒绝，告警不会发送系统通知。";
+"settings.notifications.openSystem" = "打开系统设置";
+"settings.notifications.hint" = "开启任一告警时会请求通知权限。";
+"settings.notifications.request" = "立即请求权限";
+"settings.alert.enable" = "启用告警";
+"settings.alert.threshold" = "阈值";
+"settings.alert.samples" = "连续次数";
+"settings.alert.hysteresis" = "回差";
+"settings.alert.cooldown" = "冷却";
+"settings.alert.samplesValue" = "%d 次";
+"settings.alert.minutesValue" = "%d 分钟";
+"settings.alerts.footnote" = "连续命中阈值才会触发，触发后进入冷却；回到阈值以下并留出回差后才会重新武装。";
+"settings.alerts.restore" = "恢复默认";
+"settings.alerts.restore.note" = "恢复所有告警的阈值与参数，启用状态保持不变。";
+"settings.section.recording" = "历史记录";
+"settings.retention" = "保留时长";
+"settings.retention.value" = "%d 小时";
+"settings.retention.note" = "记录 CPU、GPU、内存、网络、磁盘、温度和电池数据；超过保留时长的记录会自动删除。最多 24 小时，不记录进程数据。";
+"settings.section.export" = "导出";
+"settings.exportAll" = "导出全部数据…";
+"settings.export.note" = "将当前保留的所有记录导出为 CSV 文件，不支持按时间范围或条件筛选导出。";
+"settings.export.inProgress" = "正在导出…";
+"settings.export.success" = "已导出 %d 条记录到 %@";
+"settings.export.failure" = "导出失败：%@";
+"settings.about.versionFormat" = "版本 %1$@（%2$@）";
+"settings.about.rights" = "保留所有权利。";
+
+/* Theme presets */
+"theme.system" = "系统默认";
+"theme.blue" = "蓝色";
+"theme.green" = "绿色";
+"theme.orange" = "橙色";
+"theme.purple" = "紫色";
+"theme.graphite" = "石墨";
+"theme.ocean" = "海蓝";
+"theme.rose" = "玫红";
+
+/* Panel options */
+"panel.width.narrow" = "窄";
+"panel.width.standard" = "标准";
+"panel.width.wide" = "宽";
+"panel.density.compact" = "紧凑";
+"panel.density.standard" = "标准";
+
+/* Alerts */
+"alert.cpu.title" = "处理器";
+"alert.memory.title" = "内存";
+"alert.temperature.title" = "温度";
+"alert.diskFree.title" = "磁盘可用空间";
+"alert.cpu.notification" = "处理器占用过高";
+"alert.memory.notification" = "内存占用过高";
+"alert.temperature.notification" = "温度过高";
+"alert.diskFree.notification" = "磁盘可用空间不足";
+"alert.body" = "当前 %1$@，阈值 %2$@，已持续 %3$@。";
+"alert.duration.seconds" = "%d 秒";
+"alert.duration.minutes" = "%d 分钟";
+"alert.duration.hours" = "%d 小时 %d 分";
+
+/* Formats */
+"format.duration.hours" = "%d 小时 %d 分";
+"format.duration.minutes" = "%d 分钟";
+"format.duration.lessThanMinute" = "<1 分钟";
+"format.temperature" = "%.1f ℃";
+
+/* Device */
+"device.displayName" = "%1$@（%2$@）";
+
+/* Power assertion */
+"power.assertion.reason" = "EveryDevice 正在保持唤醒";
+
+/* App lifecycle */
+"app.bundleOnly.title" = "EveryDevice 需要以应用包运行";
+"app.bundleOnly.message" = "请先执行 ./Scripts/build-app.sh，再打开 build/EveryDevice.app。";
+"app.lockFailed.title" = "无法启动 EveryDevice";
+"app.lockFailed.message" = "单实例锁创建失败，请检查 ~/Library/Application Support/EveryDevice 的写入权限。";

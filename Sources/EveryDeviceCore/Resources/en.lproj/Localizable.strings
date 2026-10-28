@@ -1,0 +1,181 @@
+/* Metric names */
+"metric.cpu.title" = "Processor";
+"metric.gpu.title" = "Graphics";
+"metric.memory.title" = "Memory";
+"metric.network.title" = "Network";
+"metric.disk.title" = "Disk";
+"metric.battery.title" = "Battery";
+"metric.temperature.title" = "Temperature";
+
+/* Thermal pressure */
+"thermal.nominal" = "Nominal";
+"thermal.fair" = "Fair";
+"thermal.serious" = "Serious";
+"thermal.critical" = "Critical";
+
+/* Menu */
+"menu.about" = "About EveryDevice";
+"menu.settings" = "Settings…";
+"menu.hide" = "Hide EveryDevice";
+"menu.hideOthers" = "Hide Others";
+"menu.showAll" = "Show All";
+"menu.quit" = "Quit EveryDevice";
+"menu.file" = "File";
+"menu.closeWindow" = "Close Window";
+"menu.edit" = "Edit";
+"menu.undo" = "Undo";
+"menu.redo" = "Redo";
+"menu.cut" = "Cut";
+"menu.copy" = "Copy";
+"menu.paste" = "Paste";
+"menu.selectAll" = "Select All";
+"menu.window" = "Window";
+"menu.minimize" = "Minimize";
+"menu.zoom" = "Zoom";
+"menu.bringAllToFront" = "Bring All to Front";
+"status.menu.openPanel" = "Open Panel";
+"status.accessibility" = "EveryDevice system status";
+"status.tooltip.cpu" = "CPU %1$@ · GPU %2$@";
+"status.tooltip.memory" = "Memory %1$@ · Temperature %2$@";
+"status.tooltip.network" = "↓ %1$@ · ↑ %2$@";
+
+/* Panel */
+"panel.cpu.detail" = "%1$d cores · Load %2$@";
+"panel.gpu.stale" = "Stale data";
+"panel.gpu.unavailable" = "Unavailable";
+"panel.gpu.memory" = "VRAM %@";
+"panel.memory.swap" = "Swap %@";
+"panel.disk.free" = "%1$@ free of %2$@";
+"panel.disk.writeRate" = "Write %@";
+"panel.battery.absent" = "No battery detected";
+"panel.battery.charged" = "Fully charged";
+"panel.battery.charging" = "Charging";
+"panel.battery.pluggedIn" = "Plugged in";
+"panel.battery.onBattery" = "On battery";
+"panel.battery.timeToFull" = "%@ to full";
+"panel.battery.timeRemaining" = "%@ remaining";
+"panel.temperature.gpuDetail" = "GPU %1$@ · %2$@";
+"panel.temperature.unavailable" = "Temperature sensor unavailable";
+"panel.process.title" = "Processes";
+"panel.process.sort" = "Sort";
+"panel.process.cpu" = "CPU";
+"panel.process.memory" = "Memory";
+"panel.process.collecting" = "Collecting…";
+"panel.process.unreadable" = "%d more system processes unreadable";
+
+/* Settings */
+"settings.window.title" = "EveryDevice Settings";
+"settings.page.general" = "General";
+"settings.page.panel" = "Panel";
+"settings.page.alerts" = "Alerts";
+"settings.page.data" = "Data";
+"settings.page.about" = "About";
+"settings.section.menuBar" = "Menu Bar";
+"settings.ringMetric" = "Ring Metric";
+"settings.showValue" = "Show Value";
+"settings.section.refresh" = "Refresh";
+"settings.refreshInterval" = "Refresh Interval";
+"settings.interval.1s" = "1 second";
+"settings.interval.2s" = "2 seconds";
+"settings.interval.5s" = "5 seconds";
+"settings.section.launch" = "Launch";
+"settings.launchAtLogin" = "Launch at Login";
+"settings.launch.approval" = "Allow EveryDevice in System Settings › General › Login Items";
+"settings.launch.fallback" = "The system did not confirm the login item; a LaunchAgent fallback was installed";
+"settings.section.power" = "Power";
+"settings.keepAwake" = "Keep Awake (prevent idle sleep)";
+"settings.power.rejected" = "Requested, but the system did not accept it.";
+"settings.section.language" = "Language";
+"settings.language" = "Language";
+"settings.language.followSystem" = "Follow System";
+"settings.section.appearance" = "Appearance";
+"settings.appearance" = "Appearance";
+"appearance.system" = "Follow System";
+"appearance.light" = "Light";
+"appearance.dark" = "Dark";
+"settings.section.theme" = "Theme";
+"settings.section.layout" = "Layout";
+"settings.panelWidth" = "Width";
+"settings.panelDensity" = "Density";
+"settings.showTemperature" = "Temperature Strip";
+"settings.showProcesses" = "Process Ranking";
+"settings.section.cards" = "Metric Cards";
+"settings.moveUp" = "Move Up";
+"settings.moveDown" = "Move Down";
+"settings.section.notifications" = "Notification Permission";
+"settings.notifications.allowed" = "Notifications Allowed";
+"settings.notifications.denied" = "Notifications are denied; alerts will not be delivered.";
+"settings.notifications.openSystem" = "Open System Settings";
+"settings.notifications.hint" = "Enabling an alert will request notification permission.";
+"settings.notifications.request" = "Request Permission";
+"settings.alert.enable" = "Enable Alert";
+"settings.alert.threshold" = "Threshold";
+"settings.alert.samples" = "Consecutive Samples";
+"settings.alert.hysteresis" = "Hysteresis";
+"settings.alert.cooldown" = "Cooldown";
+"settings.alert.samplesValue" = "%d samples";
+"settings.alert.minutesValue" = "%d min";
+"settings.alerts.footnote" = "Alerts fire after consecutive threshold hits, then cool down. They re-arm after the value recovers past the hysteresis.";
+"settings.alerts.restore" = "Restore Defaults";
+"settings.alerts.restore.note" = "Resets thresholds and parameters for every alert; alert switches stay unchanged.";
+"settings.section.recording" = "History Recording";
+"settings.retention" = "Keep Data";
+"settings.retention.value" = "%d hours";
+"settings.retention.note" = "CPU, GPU, memory, network, disk, temperature, and battery samples are recorded. Samples older than this are deleted automatically. Maximum 24 hours; process data is not recorded.";
+"settings.section.export" = "Export";
+"settings.exportAll" = "Export All Data…";
+"settings.export.note" = "Exports every retained sample to a CSV file. There is no partial or filtered export.";
+"settings.export.inProgress" = "Exporting…";
+"settings.export.success" = "Exported %d samples to %@";
+"settings.export.failure" = "Export failed: %@";
+"settings.about.versionFormat" = "Version %1$@ (%2$@)";
+"settings.about.rights" = "All rights reserved.";
+
+/* Theme presets */
+"theme.system" = "Default";
+"theme.blue" = "Blue";
+"theme.green" = "Green";
+"theme.orange" = "Orange";
+"theme.purple" = "Purple";
+"theme.graphite" = "Graphite";
+"theme.ocean" = "Ocean";
+"theme.rose" = "Rose";
+
+/* Panel options */
+"panel.width.narrow" = "Narrow";
+"panel.width.standard" = "Standard";
+"panel.width.wide" = "Wide";
+"panel.density.compact" = "Compact";
+"panel.density.standard" = "Standard";
+
+/* Alerts */
+"alert.cpu.title" = "Processor";
+"alert.memory.title" = "Memory";
+"alert.temperature.title" = "Temperature";
+"alert.diskFree.title" = "Free Disk Space";
+"alert.cpu.notification" = "High CPU Usage";
+"alert.memory.notification" = "High Memory Usage";
+"alert.temperature.notification" = "High Temperature";
+"alert.diskFree.notification" = "Low Disk Space";
+"alert.body" = "Currently %1$@, threshold %2$@, sustained for %3$@.";
+"alert.duration.seconds" = "%d s";
+"alert.duration.minutes" = "%d min";
+"alert.duration.hours" = "%d hr %d min";
+
+/* Formats */
+"format.duration.hours" = "%d hr %d min";
+"format.duration.minutes" = "%d min";
+"format.duration.lessThanMinute" = "<1 min";
+"format.temperature" = "%.1f °C";
+
+/* Device */
+"device.displayName" = "%1$@ (%2$@)";
+
+/* Power assertion */
+"power.assertion.reason" = "EveryDevice is keeping the system awake";
+
+/* App lifecycle */
+"app.bundleOnly.title" = "EveryDevice must run as an app bundle";
+"app.bundleOnly.message" = "Run ./Scripts/build-app.sh, then open build/EveryDevice.app.";
+"app.lockFailed.title" = "Unable to Launch EveryDevice";
+"app.lockFailed.message" = "Could not create the single-instance lock. Check write access to ~/Library/Application Support/EveryDevice.";
