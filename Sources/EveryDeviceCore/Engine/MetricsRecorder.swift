@@ -124,6 +124,9 @@ public final class MetricsRecorder {
 
     public func exportAll(to url: URL) throws -> Int {
         try queue.sync {
+            guard FileManager.default.fileExists(atPath: databaseURL.path) else {
+                throw error(L10n.tr("settings.export.noData"))
+            }
             guard self.openIfNeeded(), let db else {
                 throw self.error(lastErrorMessage)
             }

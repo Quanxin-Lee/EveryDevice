@@ -122,12 +122,15 @@
 "settings.retention" = "Keep Data";
 "settings.retention.value" = "%d hours";
 "settings.retention.note" = "CPU, GPU, memory, network, disk, temperature, and battery samples are recorded. Samples older than this are deleted automatically. Maximum 24 hours; process data is not recorded.";
+"settings.recordToDisk" = "Save History to Disk";
+"settings.recordToDisk.note" = "Off by default. When off, only the latest five minutes stay in memory for the panel and no samples are written to disk. Turn on to record samples to a local database that can be exported.";
 "settings.section.export" = "Export";
 "settings.exportAll" = "Export All Data…";
 "settings.export.note" = "Exports every retained sample to a CSV file. There is no partial or filtered export.";
 "settings.export.inProgress" = "Exporting…";
 "settings.export.success" = "Exported %d samples to %@";
 "settings.export.failure" = "Export failed: %@";
+"settings.export.noData" = "No recorded samples to export.";
 "settings.about.versionFormat" = "Version %1$@ (%2$@)";
 "settings.about.rights" = "All rights reserved.";
 

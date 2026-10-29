@@ -7,6 +7,7 @@ public final class AppSettings: ObservableObject {
         static let showsValueText = "showsValueText"
         static let refreshInterval = "refreshInterval"
         static let historyRetentionHours = "historyRetentionHours"
+        static let recordsHistoryToDisk = "recordsHistoryToDisk"
         static let showsProcesses = "showsProcesses"
         static let showsTemperature = "showsTemperature"
         static let preventsSleep = "preventsSleep"
@@ -33,6 +34,10 @@ public final class AppSettings: ObservableObject {
 
     @Published public var historyRetentionHours: Int {
         didSet { defaults.set(historyRetentionHours, forKey: Key.historyRetentionHours) }
+    }
+
+    @Published public var recordsHistoryToDisk: Bool {
+        didSet { defaults.set(recordsHistoryToDisk, forKey: Key.recordsHistoryToDisk) }
     }
 
     @Published public var showsProcesses: Bool {
@@ -139,6 +144,7 @@ public final class AppSettings: ObservableObject {
         refreshInterval = storedInterval > 0 ? storedInterval : 1
         let storedRetention = defaults.integer(forKey: Key.historyRetentionHours)
         historyRetentionHours = (1...24).contains(storedRetention) ? storedRetention : 24
+        recordsHistoryToDisk = defaults.object(forKey: Key.recordsHistoryToDisk) as? Bool ?? false
         showsProcesses = defaults.object(forKey: Key.showsProcesses) as? Bool ?? true
         showsTemperature = defaults.object(forKey: Key.showsTemperature) as? Bool ?? true
         preventsSleep = defaults.object(forKey: Key.preventsSleep) as? Bool ?? false

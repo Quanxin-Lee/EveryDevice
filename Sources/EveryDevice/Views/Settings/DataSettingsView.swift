@@ -13,6 +13,13 @@ struct DataSettingsView: View {
     var body: some View {
         Form {
             Section {
+                Toggle(L10n.tr("settings.recordToDisk"), isOn: $settings.recordsHistoryToDisk)
+                    .toggleStyle(.switch)
+
+                Text(L10n.tr("settings.recordToDisk.note"))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
                 HStack(spacing: 10) {
                     Text(L10n.tr("settings.retention"))
                     Spacer(minLength: 8)
@@ -27,6 +34,7 @@ struct DataSettingsView: View {
                     .labelsHidden()
                     .accessibilityLabel(L10n.tr("settings.retention"))
                 }
+                .disabled(!settings.recordsHistoryToDisk)
 
                 Text(L10n.tr("settings.retention.note"))
                     .font(.caption)

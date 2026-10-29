@@ -76,7 +76,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         updateSamplingDemand()
-        recorder.start(retentionHours: settings.historyRetentionHours)
+        if settings.recordsHistoryToDisk {
+            recorder.start(retentionHours: settings.historyRetentionHours)
+        }
         engine.start(interval: settings.effectiveInterval)
 
         settings.$refreshInterval
@@ -91,6 +93,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             .dropFirst()
             .sink { [weak self] hours in
                 self?.recorder.setRetention(hours: hours)
+            }
+            .store(in: &cancellables)
+
+        settings.$recordsHistoryToDisk
+            .dropFirst()
+            .sink { [weak self] enabled in
+                guard let self else { return }
+                if enabled {
+                    self.recorder.start(retentionHours: self.settings.historyRetentionHours)
+                } else {
+                    self.recorder.stop()
+                }
             }
             .store(in: &cancellables)
 
